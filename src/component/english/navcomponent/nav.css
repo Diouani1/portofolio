@@ -1,0 +1,26 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99; border-radius: 20px 20px 0 0;
+    color: white;
+  }
+  .custom-navbar {
+    color: white; /* Set the text color to white */
+    transition: 0.7s ease;
+    text-decoration: none;
+  }
+  
+  .custom-navbar:hover{
+    color: blue;
+    font-weight: bolder;
+  }
+  
+
+
+#basic-nav-dropdown {
+  
+    color: white;
+  
+   
+  }
+  

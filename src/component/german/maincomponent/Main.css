@@ -1,0 +1,92 @@
+.main{
+    width: 100%;
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.522), rgba(255, 255, 255, 0.497)),
+      url(../../../assets/img/bg13.png);
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main h1{
+    width: fit-content;
+    font-size: 23px;
+    font-weight: 500; 
+    
+}
+
+.main h1 span {
+    color: #279dd2;
+    font-size: 48px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 25px;
+}
+.main h3 {
+    width: fit-content;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.main h3 span{
+    color: #279dd2;
+}
+.main-btn{
+    transition: 0.9s ease;
+
+}
+
+.main-btn:hover{
+    background-color: white;
+        color: blue;
+        border: black solid 2px;
+}
+
+.social-icons{
+    margin-top: 1rem;
+    width: 200px;
+  display: flex;
+  justify-content: space-between; 
+}
+.social-icons .button{
+    padding:0 3px;
+}
+
+
+@media screen and (max-width:992px) {
+
+    .main {
+        background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0)),
+          url(../../../assets/img/bg1.jpg);
+        background-size: cover;
+      }
+
+
+
+
+    
+}
+
+
+@media screen and (max-width: 550px) {
+
+.main h1{
+    text-align: center; 
+}
+
+.main h1 span{
+    text-align: start; 
+}
+.main h3{
+    font-size: 1rem;
+}
+
+
+}
