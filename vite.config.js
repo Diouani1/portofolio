@@ -7,4 +7,8 @@ export default defineConfig({
   build: {
     outDir: "dist", // Update this to 'dist'
   },
+  publicDir: "dist", // Specify the directory containing your static assets (CSS files)
+  css: {
+    modules: true, // Disable CSS modules unless you need them
+  },
 });
