@@ -1,13 +1,15 @@
 import "./nav.css";
 import { useState } from "react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navcomponent() {
   const [expanded, setExpanded] = useState(false);
 
-  const handleMenuItemClick = () => {
+  const navigate = useNavigate();
+  const handleMenuItemClick = (name) => {
     setExpanded(false);
+    navigate(`/${name}`);
   };
   return (
     <div className="header" id="arabicNav">
@@ -18,14 +20,12 @@ function Navcomponent() {
       >
         <Container>
           <div className="d-flex justify-content-between align-items-center w-100">
-            <Navbar.Brand style={{ fontWeight: "bold" }}>
-              <Link
-                to="/arabic"
-                className="custom-navbar"
-                onClick={handleMenuItemClick}
-              >
-                الصفحة الرئيسية
-              </Link>
+            <Navbar.Brand
+              style={{ fontWeight: "bold", cursor: "pointer" }}
+              className="custom-navbar"
+              onClick={() => handleMenuItemClick("arabic")}
+            >
+              الصفحة الرئيسية
             </Navbar.Brand>
             <Navbar.Toggle
               aria-controls="basic-navbar-nav"
@@ -34,23 +34,17 @@ function Navcomponent() {
           </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto ">
-              <Nav.Link>
-                <Link
-                  to="/arabic/about"
-                  className="custom-navbar"
-                  onClick={handleMenuItemClick}
-                >
-                  المعلومات
-                </Link>
+              <Nav.Link
+                className="custom-navbar"
+                onClick={() => handleMenuItemClick("arabic/about")}
+              >
+                المعلومات
               </Nav.Link>
-              <Nav.Link>
-                <Link
-                  to="/arabic/contact"
-                  className="custom-navbar"
-                  onClick={handleMenuItemClick}
-                >
-                  الاتصال
-                </Link>
+              <Nav.Link
+                className="custom-navbar"
+                onClick={() => handleMenuItemClick("arabic/contact")}
+              >
+                الاتصال
               </Nav.Link>
               <NavDropdown title="مشاريع" id="basic-nav-dropdown">
                 <NavDropdown.Item
@@ -73,15 +67,17 @@ function Navcomponent() {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link className="custom-navbar">
-                <Link to="/german">
-                  <span className="fi fi-de"></span>
-                </Link>
+              <Nav.Link
+                className="custom-navbar"
+                onClick={() => handleMenuItemClick("german")}
+              >
+                <span className="fi fi-de"></span>
               </Nav.Link>
-              <Nav.Link className="custom-navbar">
-                <Link to="/">
-                  <span className="fi fi-gb"></span>
-                </Link>
+              <Nav.Link
+                className="custom-navbar"
+                onClick={() => handleMenuItemClick("english")}
+              >
+                <span className="fi fi-gb"></span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
