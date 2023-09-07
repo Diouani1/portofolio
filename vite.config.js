@@ -7,5 +7,4 @@ export default defineConfig({
   build: {
     outDir: "dist", // Update this to 'dist'
   },
-  base: "https://diouani1.github.io/portofolio/",
 });
