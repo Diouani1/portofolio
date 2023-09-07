@@ -17,6 +17,10 @@ function Navcomponent() {
         expand="lg"
         expanded={expanded}
         onToggle={() => setExpanded(!expanded)}
+        style={{
+          background: "rgba(51,51,51,255)",
+          borderRadius: "20px 20px 0 0",
+        }}
       >
         <Container>
           <div className="d-flex justify-content-between align-items-center w-100">
